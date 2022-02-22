@@ -26,6 +26,7 @@ if ((mouse_check_button(mb_left)) || (gamepad_button_check(0,gp_shoulderrb)))&& 
 {
 	firingdelay = 5;
 	recoil = 4;
+	ScreenShake(1, 10);
 	with (instance_create_layer(x,y,"Bullets", oBullet))
 	{
 		speed = 25;

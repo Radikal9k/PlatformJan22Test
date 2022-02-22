@@ -1,4 +1,7 @@
 // Get Player Inputs
+
+if (hascontrol)
+{
 key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(vk_space);
@@ -24,8 +27,15 @@ if (gamepad_button_check_pressed(0, gp_face1))
 	key_jump = 1;
 	controller = 1;
 }
+}
 
-
+else
+{
+	key_right = 0;
+	key_left = 0;
+	key_jump = 0;
+	
+}
 // Calculate movements
 var move = key_right - key_left;
 
